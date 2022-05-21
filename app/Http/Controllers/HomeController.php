@@ -24,38 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-            
-        $curl = curl_init();
+        $bookChunks = Book::limit(10)->get()->chunk(2);
 
-        curl_setopt_array($curl, [
-            CURLOPT_URL => "https://europeanastefan-skliarovv1.p.rapidapi.com/getDatasets",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "apiKey=lecitchysbun",
-            CURLOPT_HTTPHEADER => [
-                "X-RapidAPI-Host: Europeanastefan-skliarovV1.p.rapidapi.com",
-                "X-RapidAPI-Key: 0ab2fe8b0amshde98fb0af00d23ap14855fjsneca8f465d72b",
-                "content-type: application/x-www-form-urlencoded"
-            ],
-        ]);
-
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
-
-        curl_close($curl);
-
-        if ($err) {
-            echo "cURL Error #:" . $err;
-        } else {
-            echo $response;
-        }
-        $books = Book::all();
-
-        return view('home')->with('books', $books);
-    }
+        return view('home')->with('bookChunks', $bookChunks);
+    } 
 }

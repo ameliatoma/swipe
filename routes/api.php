@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SwipeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +19,3 @@ use App\Http\Controllers\HomeController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-// TODO:: Exemplu ruta crud
-// Route::resource('home', HomeController::class);
-
-
-// TODO:: Exemplu rute grupate
-// Route::name('admin.')->group(function () {
-//     Route::get('/books', [HomeController::class, 'index'])->name('books');
-//     Route::get('/books/edit/{id}', [HomeController::class, 'edit'])->name('books');
-//     Route::get('/books/destroy', [HomeController::class, 'destroy'])->name('books');
-// });
