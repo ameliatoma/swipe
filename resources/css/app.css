@@ -1,11 +1,17 @@
 .card-horizontal {
     display: flex;
     flex: 1 1 auto;
+<<<<<<< HEAD
     background-color: #16151b;
     
   }
 
 .mb-60 {
+=======
+  }
+
+.mb-40 {
+>>>>>>> db07297e1e7b8acb6410f9cd0e0b60fd3485d3c8
     margin-bottom: 40px;
 }
 
@@ -22,6 +28,7 @@
   margin-top: 7.5px !important;
 }
  
+<<<<<<< HEAD
 body
 {
   background-color:#EEE5E9;
@@ -216,3 +223,8 @@ p
 }
 
 /*REVIEW SYSTEM COMMENT*/
+=======
+.mt-72 {
+  margin-top: 72.5px !important;
+}
+>>>>>>> db07297e1e7b8acb6410f9cd0e0b60fd3485d3c8

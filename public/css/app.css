@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Oswald:500);
 .card-horizontal {
     display: flex;
@@ -8,6 +9,14 @@
   }
 
 .mb-60 {
+=======
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+  }
+
+.mb-40 {
+>>>>>>> db07297e1e7b8acb6410f9cd0e0b60fd3485d3c8
     margin-bottom: 40px;
 }
 
@@ -24,6 +33,7 @@
   margin-top: 7.5px !important;
 }
  
+<<<<<<< HEAD
 body
 {
   background-color:#EEE5E9;
@@ -240,6 +250,11 @@ p
 
 /*REVIEW SYSTEM COMMENT*/
 
+=======
+.mt-72 {
+  margin-top: 72.5px !important;
+}
+>>>>>>> db07297e1e7b8acb6410f9cd0e0b60fd3485d3c8
 @charset "UTF-8";
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
